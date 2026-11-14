@@ -1,0 +1,3 @@
+*.js filter=sin-comentarios
+*.jsx filter=sin-comentarios
+*.css filter=sin-comentarios

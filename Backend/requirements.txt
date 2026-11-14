@@ -1,0 +1,27 @@
+# Dependencias del backend Django + DRF para el Observatorio Saber 11 ICFES
+# Framework web principal de Django
+Django>=5.1.0,<6.2.0
+
+# Django REST Framework para construccion de API REST y serializadores
+djangorestframework>=3.15.0
+
+# Manejo de encabezados CORS para peticiones desde React durante desarrollo
+django-cors-headers>=4.3.0
+
+# Driver de conexion de alto rendimiento para PostgreSQL (version binaria optimizada)
+psycopg[binary]>=3.2.0
+
+# Carga de variables de entorno desde archivo .env local
+python-dotenv>=1.0.0
+
+# Servidor de archivos estaticos optimizado para produccion en Render
+whitenoise>=6.7.0
+
+# Servidor de aplicaciones WSGI para entornos Unix / produccion en Render
+gunicorn>=22.0.0
+
+# Utilidad para parsear cadenas de conexion DATABASE_URL en configuracion de Django
+dj-database-url>=2.2.0
+
+# Cliente HTTP robusto para la descarga de datos desde datos.gov.co
+requests>=2.31.0
