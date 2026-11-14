@@ -47,12 +47,18 @@ body {
 }
 
 /* Tipografía de botones y entradas heredada */
-button, input, select, textarea {
+button,
+input,
+select,
+textarea {
   font: inherit;
 }
 
 /* Resaltado de accesibilidad en teclado */
-button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible {
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
   outline: 3px solid var(--acento);
   outline-offset: 2px;
 }
@@ -631,4 +637,106 @@ table.datos-tabla tbody tr:hover {
   font-weight: 700;
   padding: 4px 10px;
   border-radius: 12px;
+}
+@media (max-width: 640px) {
+
+  html,
+  body {
+    overflow-x: hidden;
+  }
+
+  .app-shell {
+    width: calc(100% - 24px);
+    padding: 16px 0 32px;
+  }
+
+  .masthead {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .masthead-controls {
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .nav-tabs {
+    margin: 16px 0;
+  }
+
+  .nav-tab-btn {
+    white-space: nowrap;
+    flex-shrink: 0;
+    padding: 10px 14px;
+  }
+
+  .filtros-card {
+    padding: 16px;
+  }
+
+  .filtros-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .campo-filtro {
+    min-width: 0;
+  }
+
+  .campo-filtro input,
+  .campo-filtro select {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .acciones-filtro {
+    grid-column: 1 / -1;
+    flex-wrap: wrap;
+  }
+
+  .acciones-filtro .btn-accion {
+    flex: 1 1 auto;
+    justify-content: center;
+  }
+
+  .tabla-header-bar {
+    flex-wrap: wrap;
+    gap: 8px;
+    padding: 14px 16px;
+  }
+
+  .paginacion-bar {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .graficas-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 16px;
+  }
+
+  .grafica-card {
+    padding: 16px;
+    min-width: 0;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .grafica-card div[style*="height"] {
+    min-width: 480px !important;
+  }
+
+  .acerca-card {
+    padding: 20px 16px;
+  }
+
+  .modal-body {
+    padding: 16px;
+  }
+
+  .modal-footer {
+    flex-wrap: wrap;
+  }
 }
